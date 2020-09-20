@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"
+      integrity="sha256-HkXXtFRaflZ7gjmpjGQBENGnq8NIno4SDNq/3DbkMgo="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="precision">
+      <p>precision</p>
+      <input
+        type="number"
+        id="precision-number"
+        name="precision-number"
+        min="2"
+        max="100"
+        value="50"
+      />
+      <button id="precision-btn">go</button>
+    </div>
+
+    <div id="currently-used-tool">
+      <p><i></i></p>
+    </div>
+
+    <div id="color-picker">
+      <p>pick another:</p>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+    </div>
+
+    <div id="palette"></div>
+
+    <div id="options">
+      <ul>
+        <li>
+          <i id="grid" class="fas fa-border-all icons"></i>
+          <i id="brush" class="fas fa-paint-brush icons"></i>
+          <i id="eraser" class="fas fa-eraser icons"></i>
+          <i id="clear" class="far fa-trash-alt icons"></i>
+          <i id="eye-dropper" class="fas fa-eye-dropper icons"></i>
+          <i id="#" class="fas fa-border-all icons"></i>
+          <i id="#" class="fas fa-border-all icons"></i>
+        </li>
+      </ul>
+    </div>
+
+    <div id="curr-color"></div>
+
+    <div id="container"></div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

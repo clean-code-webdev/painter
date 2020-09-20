@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #191919;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#not-available {
+    color: white;
+    font-size: 2rem;
+    line-height: 7rem;
+    width: 90%;
+    text-align: center;
+}
+
+#color-picker {
+    width: 17vh;
+    height: 2rem;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 10vh;
+    left: calc(50vw - (50vh + 12vh));
+    p {
+        font-size: 0.9rem;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        line-height: 2rem;
+    }
+    img {
+        display: none;
+    }
+    input {
+        height: 2rem;
+        width: 2rem;
+        padding: 0;
+        border: 0;
+        background: #191919;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+            transform: scale(2);
+        }
+    }
+}
+
+#palette {
+    width: 20vh;
+    height: 40vh;
+    border: 0.1rem solid black;
+    background: black;
+    position: fixed;
+    top: calc(10vh + 3rem);
+    left: calc(50vw - (50vh + 12vh));
+    // padding: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 0rem;
+    .color {
+        transition: 0.3s;
+        background: lightslategrey;
+        cursor: crosshair;
+        transform-origin: 50%;
+        &:hover {
+            transform: scale(2);
+            z-index: 10;
+            border-radius: 50%;
+        }
+    }
+}
+
+#options {
+    width: 20vh;
+    height: 32vh;
+    // border: 0.1rem solid black;
+    // background: lightblue;
+    position: fixed;
+    top: calc(58vh);
+    left: calc(50vw - (50vh + 12vh));
+    ul {
+        li {
+            list-style: none;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            .icons {
+                cursor: pointer;
+                color: rgb(129, 84, 84);
+            }
+            #grid {
+                color: #f1f3f6;
+            }
+            #eraser {
+                color: white;
+            }
+            #clear {
+                color: white;
+            }
+            #eye-dropper {
+                color: white;
+            }
+            #brush {
+                color: white;
+            }
+        }
+    }
+}
+
+#curr-color {
+    width: 5rem;
+    height: 2rem;
+    border: 0.1rem solid white;
+    position: fixed;
+    top: 5vh;
+    left: calc(50vw - 2.5rem);
+}
+
+#container {
+    width: 80vh;
+    height: 80vh;
+    position: fixed;
+    top: 10vh;
+    left: calc(50vw - 40vh);
+    border: 0.1rem solid black;
+    background: rgb(230, 226, 226);
+    display: grid;
+    gap: 0;
+    .pixel {
+        border: 0.1rem solid #f1f3f6;
+        // border: 0;
+        background: white;
+        cursor: url("../img/paint-brush-solid.svg");
+    }
+}
+
+#precision {
+    width: 15rem;
+    height: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.1rem;
+    position: fixed;
+    top: 5vh;
+    left: calc(50vw - (50vh - 7rem));
+    p {
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin: 0 0.5rem;
+    }
+    #precision-number {
+        text-align: center;
+        margin: 0 0.5rem;
+    }
+    #precision-btn {
+        padding: 0.4rem 0.5rem;
+        margin: 0 0.5rem;
+        // align-items: center;
+        letter-spacing: 0.1rem;
+        border: 0;
+        text-transform: uppercase;
+        font-size: 1rem;
+        cursor: pointer;
+        background: white;
+        transition: 0.3s;
+        &:hover {
+            background: red;
+            color: white;
+        }
+    }
+}
+
+#currently-used-tool {
+    position: fixed;
+    top: 5vh;
+    right: calc(50vw - (50vh - 7rem));
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}

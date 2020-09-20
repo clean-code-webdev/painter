@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #191919;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#not-available {
+  color: white;
+  font-size: 2rem;
+  line-height: 7rem;
+  width: 90%;
+  text-align: center;
+}
+
+#color-picker {
+  width: 17vh;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  top: 10vh;
+  left: calc(50vw - (50vh + 12vh));
+}
+
+#color-picker p {
+  font-size: 0.9rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+#color-picker img {
+  display: none;
+}
+
+#color-picker input {
+  height: 2rem;
+  width: 2rem;
+  padding: 0;
+  border: 0;
+  background: #191919;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#color-picker input:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+#palette {
+  width: 20vh;
+  height: 40vh;
+  border: 0.1rem solid black;
+  background: black;
+  position: fixed;
+  top: calc(10vh + 3rem);
+  left: calc(50vw - (50vh + 12vh));
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[10];
+      grid-template-columns: repeat(10, 1fr);
+  gap: 0rem;
+}
+
+#palette .color {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: lightslategrey;
+  cursor: crosshair;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+}
+
+#palette .color:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  z-index: 10;
+  border-radius: 50%;
+}
+
+#options {
+  width: 20vh;
+  height: 32vh;
+  position: fixed;
+  top: calc(58vh);
+  left: calc(50vw - (50vh + 12vh));
+}
+
+#options ul li {
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+#options ul li .icons {
+  cursor: pointer;
+  color: #815454;
+}
+
+#options ul li #grid {
+  color: #f1f3f6;
+}
+
+#options ul li #eraser {
+  color: white;
+}
+
+#options ul li #clear {
+  color: white;
+}
+
+#options ul li #eye-dropper {
+  color: white;
+}
+
+#options ul li #brush {
+  color: white;
+}
+
+#curr-color {
+  width: 5rem;
+  height: 2rem;
+  border: 0.1rem solid white;
+  position: fixed;
+  top: 5vh;
+  left: calc(50vw - 2.5rem);
+}
+
+#container {
+  width: 80vh;
+  height: 80vh;
+  position: fixed;
+  top: 10vh;
+  left: calc(50vw - 40vh);
+  border: 0.1rem solid black;
+  background: #e6e2e2;
+  display: -ms-grid;
+  display: grid;
+  gap: 0;
+}
+
+#container .pixel {
+  border: 0.1rem solid #f1f3f6;
+  background: white;
+  cursor: url("../img/paint-brush-solid.svg");
+}
+
+#precision {
+  width: 15rem;
+  height: 2rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.1rem;
+  position: fixed;
+  top: 5vh;
+  left: calc(50vw - (50vh - 7rem));
+}
+
+#precision p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+#precision #precision-number {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+#precision #precision-btn {
+  padding: 0.4rem 0.5rem;
+  margin: 0 0.5rem;
+  letter-spacing: 0.1rem;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#precision #precision-btn:hover {
+  background: red;
+  color: white;
+}
+
+#currently-used-tool {
+  position: fixed;
+  top: 5vh;
+  right: calc(50vw - (50vh - 7rem));
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
