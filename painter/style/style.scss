@@ -94,7 +94,6 @@ body {
     ul {
         li {
             list-style: none;
-            text-transform: uppercase;
             letter-spacing: 0.1rem;
             padding: 0.5rem;
             font-size: 1.5rem;
@@ -120,6 +119,21 @@ body {
             #brush {
                 color: white;
             }
+        }
+        p {
+            font-size: 1.5rem;
+            color: white;
+            margin-top: 2rem;
+            letter-spacing: 0.1rem;
+        }
+        li.instr {
+            color: white;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            padding: 0.4rem 0.5rem;
+            display: flex;
+
+            // text-transform: lowercase;
         }
     }
 }
